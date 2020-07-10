@@ -18,7 +18,7 @@
         <!--HintergrundBild-->
         <!--Datagrid für Planetinfo-->
         
-        <Image x:Name="BackgroundMainPage" Source="/Pictures/Sonnensystem-Stockillustration-768x512.png" Stretch="Fill"/>
+        <Image x:Name="BackgroundMainPage" Source="/Sonnensystem-Stockillustration-768x512.png" Stretch="Fill"/>
         <Button x:Name="BtnMerkur" Background="Transparent" HorizontalAlignment="Left" Height="61" Margin="216,426,0,0" VerticalAlignment="Top" Width="60" Click="BtnMerkur_Click" MouseEnter="BtnMerkur_MouseEnter" MouseLeave="BtnMerkur_MouseLeave"/>
         <Button x:Name="BtnErde" Background="Transparent" HorizontalAlignment="Left" Height="116" Margin="302,353,0,0" VerticalAlignment="Top" Width="105" Click="BtnErde_Click" MouseEnter="BtnErde_MouseEnter" MouseLeave="BtnErde_MouseLeave"/>
         <Button x:Name="BtnVenus" Background="Transparent" HorizontalAlignment="Left" Height="62" Margin="190,276,0,0" VerticalAlignment="Top" Width="52" Click="BtnVenus_Click" MouseEnter="BtnVenus_MouseEnter" MouseLeave="BtnVenus_MouseLeave"/>
