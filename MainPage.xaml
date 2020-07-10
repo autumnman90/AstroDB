@@ -1,0 +1,50 @@
+﻿<Page x:Class="AstronomieDatenbank.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AstronomieDatenbank"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="MainPage">
+   
+
+
+
+
+    <Grid>
+        <!--HintergrundBild-->
+        <!--Planeten Buttons-->
+        <!--HintergrundBild-->
+        <!--Datagrid für Planetinfo-->
+        
+        <Image x:Name="BackgroundMainPage" Source="/Pictures/Sonnensystem-Stockillustration-768x512.png" Stretch="Fill"/>
+        <Button x:Name="BtnMerkur" Background="Transparent" HorizontalAlignment="Left" Height="61" Margin="216,426,0,0" VerticalAlignment="Top" Width="60" Click="BtnMerkur_Click" MouseEnter="BtnMerkur_MouseEnter" MouseLeave="BtnMerkur_MouseLeave"/>
+        <Button x:Name="BtnErde" Background="Transparent" HorizontalAlignment="Left" Height="116" Margin="302,353,0,0" VerticalAlignment="Top" Width="105" Click="BtnErde_Click" MouseEnter="BtnErde_MouseEnter" MouseLeave="BtnErde_MouseLeave"/>
+        <Button x:Name="BtnVenus" Background="Transparent" HorizontalAlignment="Left" Height="62" Margin="190,276,0,0" VerticalAlignment="Top" Width="52" Click="BtnVenus_Click" MouseEnter="BtnVenus_MouseEnter" MouseLeave="BtnVenus_MouseLeave"/>
+        <Button x:Name="BtnJupiter" Background="Transparent" HorizontalAlignment="Left" Height="151" Margin="421,0,0,0" VerticalAlignment="Center" Width="138" Click="BtnJupiter_Click" MouseEnter="BtnJupiter_MouseEnter" MouseLeave="BtnJupiter_MouseLeave"/>
+        <Button x:Name="BtnMars" Background="Transparent" HorizontalAlignment="Left" Height="80" Margin="321,207,0,0" VerticalAlignment="Top" Width="79" Click="BtnMars_Click" MouseEnter="BtnMars_MouseEnter" MouseLeave="BtnMars_MouseLeave"/>
+        <Button x:Name="BtnUranus" Background="Transparent" HorizontalAlignment="Left" Height="98" Margin="573,127,0,0" VerticalAlignment="Top" Width="80" Click="BtnUranus_Click" MouseEnter="BtnUranus_MouseEnter" MouseLeave="BtnUranus_MouseLeave"/>
+        <Button x:Name="BtnNeptun" Background="Transparent" HorizontalAlignment="Left" Height="70" Margin="667,207,0,0" VerticalAlignment="Top" Width="113" Click="BtnNeptun_Click" MouseEnter="BtnNeptun_MouseEnter" MouseLeave="BtnNeptun_MouseLeave"/>
+        <Button x:Name="BtnPluto" Background="Transparent" HorizontalAlignment="Left" Height="37" Margin="724,93,0,0" VerticalAlignment="Top" Width="32" Click="BtnPluto_Click" MouseEnter="BtnPluto_MouseEnter" MouseLeave="BtnPluto_MouseLeave"/>
+        <Button x:Name="BtnSaturn" Background="Transparent" HorizontalAlignment="Left" Height="84" Margin="532,403,0,0" VerticalAlignment="Top" Width="163" Click="BtnSaturn_Click" MouseEnter="BtnSaturn_MouseEnter" MouseLeave="BtnSaturn_MouseLeave"/>
+
+        <DataGrid x:Name="Planetinfo" Visibility="Hidden" Width="200" Height="200" VerticalAlignment="Top" HorizontalAlignment="Left" Background="White" Margin="39,44,0,0">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="Turquoise"/>
+                    <Setter Property="FontWeight" Value="Black"/>
+                </Style>
+
+            </DataGrid.Resources>
+
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Planetinfo" Width="*"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+    </Grid>
+</Page>

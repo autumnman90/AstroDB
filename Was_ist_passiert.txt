@@ -1,0 +1,8 @@
+﻿Hallo Team, in diesem Dokument schreiben wir unsere Änderungen rein damit jeder diese nachvollziehen kann
+Bitte denkt auch immer daran euren Code zu Kommentieren, danke!
+
+07.07. 12:57 -> Was_ist_passiert.txt zur Solution hinzugefügt, nutzen siehe BEschreibung in der Kopfzeile ;)/Matthäus
+
+08.07. 9:26 -> MainFrame in MainWindow hinzugefügt, größe des MainWindows auf 600 x 800 gesetzt/Matthäus
+
+09.07. 13:00 -> Durchsichtige Buttons in MainPage eingefügt und die ClickEvents erzeugt/Matthäus

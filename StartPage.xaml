@@ -1,0 +1,28 @@
+﻿<Page x:Class="AstronomieDatenbank.StartPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AstronomieDatenbank"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="StartPage">
+
+    <Grid>
+
+        <Image HorizontalAlignment="Left" Height="600" VerticalAlignment="Top" Width="800" Source="/Pictures/Sonnensysem-im-Anfangsstatium-768x480.png" Stretch="Fill" />
+        <TextBlock HorizontalAlignment="Left" Height="133" Margin="23,40,0,0" FontStyle="Italic" Foreground="White" FontSize="72" Text="Astronomie Datenbank" TextWrapping="Wrap" VerticalAlignment="Top" Width="767" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0.0"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="73" Margin="656,517,0,0" Foreground="White" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"><Run Text="© "/><Span FontFamily="Arial" FontSize="17.3333333333333"/><Run Text=" Maria Eleni Sotircho"/><LineBreak/><Run Language="de-de" Text="     Roman Trusov"/><LineBreak/><Run Language="de-de" Text="     Natalia Buzel"/><LineBreak/><Run Language="de-de" Text="     Matthäus Herbst"/><Run Text=""/></TextBlock>
+        <Button x:Name="Start" Background="Transparent" FontSize="75" Foreground="AntiqueWhite" Content="Start" HorizontalAlignment="Left" Height="137" Margin="216,262,0,0" VerticalAlignment="Top" Width="333" Click="Start_Click"/>
+
+    </Grid>
+</Page>
