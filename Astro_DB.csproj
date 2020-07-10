@@ -6,4 +6,22 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Pictures\Sonnensysem-im-Anfangsstatium-768x480.png" />
+    <None Remove="Pictures\Sonnensystem-Stockillustration-768x512.png" />
+    <None Remove="Sonnensysem-im-Anfangsstatium-768x480.png" />
+    <None Remove="Sonnensystem-Stockillustration-768x512.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Pictures\Sonnensysem-im-Anfangsstatium-768x480.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Sonnensystem-Stockillustration-768x512.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sonnensysem-im-Anfangsstatium-768x480.png" />
+    <Resource Include="Sonnensystem-Stockillustration-768x512.png" />
+  </ItemGroup>
+
 </Project>
