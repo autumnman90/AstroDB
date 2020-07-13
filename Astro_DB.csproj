@@ -7,17 +7,61 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Pictures\Erde.png" />
+    <None Remove="Pictures\Jupiter.png" />
+    <None Remove="Pictures\mars.png" />
+    <None Remove="Pictures\Merkur.png" />
+    <None Remove="Pictures\neptun.png" />
+    <None Remove="Pictures\pluto.png" />
+    <None Remove="Pictures\Saturn.png" />
+    <None Remove="Pictures\sonne.png" />
     <None Remove="Pictures\Sonnensysem-im-Anfangsstatium-768x480.png" />
     <None Remove="Pictures\Sonnensystem-Stockillustration-768x512.png" />
+    <None Remove="Pictures\Sonnensystem2_1.png" />
+    <None Remove="Pictures\Uranus.png" />
+    <None Remove="Pictures\Venus.png" />
     <None Remove="Sonnensysem-im-Anfangsstatium-768x480.png" />
     <None Remove="Sonnensystem-Stockillustration-768x512.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Pictures\Erde.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Jupiter.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\mars.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Merkur.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\neptun.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\pluto.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Saturn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\sonne.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Pictures\Sonnensysem-im-Anfangsstatium-768x480.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Pictures\Sonnensystem-Stockillustration-768x512.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Sonnensystem2_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Uranus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Venus.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Sonnensysem-im-Anfangsstatium-768x480.png" />
