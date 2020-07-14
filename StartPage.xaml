@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AstronomieDatenbank"
       mc:Ignorable="d" 
-      d:DesignHeight="600" d:DesignWidth="800"
+      d:DesignHeight="720" d:DesignWidth="1024"
       Title="StartPage">
     <Page.Resources>
         <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#000000FD"/>
@@ -42,8 +42,8 @@
 
     <Grid>
 
-        <Image HorizontalAlignment="Left" Height="600" VerticalAlignment="Top" Width="800" Source="/Sonnensysem-im-Anfangsstatium-768x480.png" Stretch="Fill" />
-        <TextBlock HorizontalAlignment="Left" Height="133" Margin="23,40,0,0" FontStyle="Italic" Foreground="White" FontSize="72" Text="Astronomie Datenbank" TextWrapping="Wrap" VerticalAlignment="Top" Width="767" RenderTransformOrigin="0.5,0.5">
+        <Image HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="1024" Source="/Sonnensysem-im-Anfangsstatium-768x480.png" Stretch="Fill" />
+        <TextBlock HorizontalAlignment="Center" Height="134" Margin="0,68,0,0" FontStyle="Italic" Foreground="White" FontSize="72" Text="Astronomie Datenbank" TextWrapping="Wrap" VerticalAlignment="Top" Width="768" RenderTransformOrigin="0.5,0.5">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -53,8 +53,8 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock HorizontalAlignment="Left" Height="73" Margin="656,517,0,0" Foreground="White" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"><Run Text="© "/><Span FontFamily="Arial" FontSize="17.3333333333333"/><Run Text=" Maria Eleni Sotircho"/><LineBreak/><Run Language="de-de" Text="     Roman Trusov"/><LineBreak/><Run Language="de-de" Text="     Natalia Buzel"/><LineBreak/><Run Language="de-de" Text="     Matthäus Herbst"/><Run Text=""/></TextBlock>
-        <Button Template="{DynamicResource ButtonTemplate1}" x:Name="Start" Background="Transparent" FontSize="75" Foreground="AntiqueWhite" Content="Start" HorizontalAlignment="Left" Height="137" Margin="216,262,0,0" VerticalAlignment="Top" Width="333" Click="Start_Click"/>
+        <TextBlock HorizontalAlignment="Left" Height="73" Margin="880,637,0,0" Foreground="White" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"><Run Text="© "/><Span FontFamily="Arial" FontSize="17.3333333333333"/><Run Text=" Maria Eleni Sotircho"/><LineBreak/><Run Language="de-de" Text="     Roman Trusov"/><LineBreak/><Run Language="de-de" Text="     Natalia Buzel"/><LineBreak/><Run Language="de-de" Text="     Matthäus Herbst"/><Run Text=""/></TextBlock>
+        <Button Template="{DynamicResource ButtonTemplate1}" BorderBrush="Transparent"  x:Name="Start" Background="Transparent" FontSize="120" Foreground="AntiqueWhite" Content="Warp"  HorizontalAlignment="Left" Height="170" Margin="332,0,0,0" VerticalAlignment="Center" Width="333" Click="Start_Click" FontWeight="Normal" FontStyle="Italic"/>
 
     </Grid>
 </Page>

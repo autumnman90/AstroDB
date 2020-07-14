@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="AstroDB" Height="600" Width="800" ResizeMode="CanResize" SizeToContent="WidthAndHeight">
+        Title="AstroDB" Height="720" Width="1024" ResizeMode="CanResize" SizeToContent="WidthAndHeight">
     <Grid>
         
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Content="Frame" HorizontalAlignment="Center" Height="600" VerticalAlignment="Center" Width="800"/>
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Content="Frame" HorizontalAlignment="Center" Height="720" VerticalAlignment="Center" Width="1024"/>
 
     </Grid>
 </Window>
