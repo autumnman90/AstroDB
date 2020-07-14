@@ -5,8 +5,65 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AstronomieDatenbank"
       mc:Ignorable="d" 
-      d:DesignHeight="600" d:DesignWidth="800"
+      d:DesignHeight="720" d:DesignWidth="1024"
       Title="MainPage">
+    <Page.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" SnapsToDevicePixels="true" StrokeThickness="1" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#00DDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#00707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#00BEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#003C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#00C4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#002C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
 
 
 
@@ -19,17 +76,27 @@
         <!--Datagrid für Planetinfo-->
 
         <Image x:Name="BackgroundMainPage" Source="/Pictures/Sonnensystem2_1.png" Stretch="Fill"/>
-        <Button x:Name="BtnMerkur" Background="Transparent" HorizontalAlignment="Left" Height="29" Margin="241,351,0,0" VerticalAlignment="Top" Width="25" Click="BtnMerkur_Click" MouseEnter="BtnMerkur_MouseEnter" MouseLeave="BtnMerkur_MouseLeave"></Button>
-        <Button x:Name="BtnErde" Background="Transparent" HorizontalAlignment="Left" Height="60" Margin="320,230,0,0" VerticalAlignment="Top" Width="42" Click="BtnErde_Click" MouseEnter="BtnErde_MouseEnter" MouseLeave="BtnErde_MouseLeave"/>
-        <Button x:Name="BtnVenus" Background="Transparent" HorizontalAlignment="Left" Height="66" Margin="310,300,0,0" VerticalAlignment="Top" Width="36" Click="BtnVenus_Click" MouseEnter="BtnVenus_MouseEnter" MouseLeave="BtnVenus_MouseLeave"/>
-        <Button x:Name="BtnJupiter" Background="Transparent" HorizontalAlignment="Left" Height="76" Margin="400,112,0,0" VerticalAlignment="Top" Width="62" Click="BtnJupiter_Click" MouseEnter="BtnJupiter_MouseEnter" MouseLeave="BtnJupiter_MouseLeave"/>
-        <Button x:Name="BtnMars" Background="Transparent" HorizontalAlignment="Left" Height="45" Margin="443,207,0,0" VerticalAlignment="Top" Width="36" Click="BtnMars_Click" MouseEnter="BtnMars_MouseEnter" MouseLeave="BtnMars_MouseLeave"/>
-        <Button x:Name="BtnUranus" Background="Transparent" HorizontalAlignment="Left" Height="30" Margin="483,44,0,0" VerticalAlignment="Top" Width="27" Click="BtnUranus_Click" MouseEnter="BtnUranus_MouseEnter" MouseLeave="BtnUranus_MouseLeave"/>
-        <Button x:Name="BtnNeptun" Background="Transparent" HorizontalAlignment="Left" Height="27" Margin="614,0,0,0" VerticalAlignment="Top" Width="22" Click="BtnNeptun_Click" MouseEnter="BtnNeptun_MouseEnter" MouseLeave="BtnNeptun_MouseLeave"/>
-        <Button x:Name="BtnPluto" Background="Transparent" HorizontalAlignment="Left" Height="27" Margin="268,10,0,0" VerticalAlignment="Top" Width="23" Click="BtnPluto_Click" MouseEnter="BtnPluto_MouseEnter" MouseLeave="BtnPluto_MouseLeave"/>
-        <Button x:Name="BtnSaturn" Background="Transparent" HorizontalAlignment="Left" Height="73" Margin="525,71,0,0" VerticalAlignment="Top" Width="100" Click="BtnSaturn_Click" MouseEnter="BtnSaturn_MouseEnter" MouseLeave="BtnSaturn_MouseLeave"/>
+        <Button Style="{DynamicResource ButtonStyle1}" x:Name="BtnMerkur" Background="Transparent" HorizontalAlignment="Left" Height="40" Margin="310,434,0,0" VerticalAlignment="Top" Width="28" Click="BtnMerkur_Click" MouseEnter="BtnMerkur_MouseEnter" MouseLeave="BtnMerkur_MouseLeave"></Button>
+        <Button Style="{DynamicResource ButtonStyle1}" x:Name="BtnErde" Background="Transparent" HorizontalAlignment="Left" Height="79" Margin="410,281,0,0" VerticalAlignment="Top" Width="52" Click="BtnErde_Click" MouseEnter="BtnErde_MouseEnter" MouseLeave="BtnErde_MouseLeave"/>
+        <Button Style="{DynamicResource ButtonStyle1}" x:Name="BtnVenus" Background="Transparent" HorizontalAlignment="Left" Height="80" Margin="390,365,0,0" VerticalAlignment="Top" Width="55" Click="BtnVenus_Click" MouseEnter="BtnVenus_MouseEnter" MouseLeave="BtnVenus_MouseLeave"/>
+        <Button Style="{DynamicResource ButtonStyle1}" x:Name="BtnJupiter" Background="Transparent" HorizontalAlignment="Left" Height="103" Margin="513,149,0,0" VerticalAlignment="Top" Width="76" Click="BtnJupiter_Click" MouseEnter="BtnJupiter_MouseEnter" MouseLeave="BtnJupiter_MouseLeave"/>
+        <Button Style="{DynamicResource ButtonStyle1}" x:Name="BtnMars" Background="Transparent" HorizontalAlignment="Left" Height="61" Margin="566,257,0,0" VerticalAlignment="Top" Width="45" Click="BtnMars_Click" MouseEnter="BtnMars_MouseEnter" MouseLeave="BtnMars_MouseLeave"/>
+        <Button Style="{DynamicResource ButtonStyle1}" x:Name="BtnUranus" Background="Transparent" HorizontalAlignment="Left" Height="45" Margin="618,55,0,0" VerticalAlignment="Top" Width="37" Click="BtnUranus_Click" MouseEnter="BtnUranus_MouseEnter" MouseLeave="BtnUranus_MouseLeave"/>
+        <Button Style="{DynamicResource ButtonStyle1}" x:Name="BtnNeptun" Background="Transparent" HorizontalAlignment="Left" Height="28" Margin="785,10,0,0" VerticalAlignment="Top" Width="30" Click="BtnNeptun_Click" MouseEnter="BtnNeptun_MouseEnter" MouseLeave="BtnNeptun_MouseLeave"/>
+        <Button Style="{DynamicResource ButtonStyle1}" x:Name="BtnPluto" Background="Transparent" HorizontalAlignment="Left" Height="37" Margin="343,10,0,0" VerticalAlignment="Top" Width="31" Click="BtnPluto_Click" MouseEnter="BtnPluto_MouseEnter" MouseLeave="BtnPluto_MouseLeave"/>
+        <Button Style="{DynamicResource ButtonStyle1}" x:Name="BtnSaturn" Background="Transparent" HorizontalAlignment="Left" Height="98" Margin="684,89,0,0" VerticalAlignment="Top" Width="81" Click="BtnSaturn_Click" MouseEnter="BtnSaturn_MouseEnter" MouseLeave="BtnSaturn_MouseLeave"/>
+        <Button Style="{DynamicResource ButtonStyle1}" x:Name="BtnSonne" Background="Transparent" HorizontalAlignment="Left" Height="276" Margin="94,434,0,0" VerticalAlignment="Top" Width="190" Click="BtnSonne_Click" MouseEnter="BtnSonne_MouseEnter" MouseLeave="BtnSonne_MouseLeave" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.408"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
 
-        <DataGrid x:Name="Planetinfo" Background="Transparent" RowBackground="Transparent" Visibility="Hidden" Width="240" Height="244" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="525,323,0,0" FontSize="25" FontWeight="Normal">
+        <DataGrid x:Name="Planetinfo" Background="Transparent" RowBackground="Transparent" Visibility="Visible" Width="251" Height="292" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="684,405,0,0" FontSize="25" FontWeight="Normal">
             <DataGrid.Resources>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
                     <Setter Property="Background" Value="Transparent"/>

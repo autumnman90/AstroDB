@@ -15,15 +15,13 @@ using System.Windows.Shapes;
 namespace Astro_DB
 {
     /// <summary>
-    /// Interaction logic for Erde.xaml
+    /// Interaktionslogik für Sonne.xaml
     /// </summary>
-    public partial class Erde : Page
+    public partial class Sonne : Page
     {
-        public Erde()
+        public Sonne()
         {
             InitializeComponent();
-            
-
         }
 
         private void backbutton_Click(object sender, RoutedEventArgs e)

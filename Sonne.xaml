@@ -1,4 +1,4 @@
-﻿<Page x:Class="Astro_DB.Saturn"
+﻿<Page x:Class="Astro_DB.Sonne"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,10 +6,10 @@
       xmlns:local="clr-namespace:Astro_DB"
       mc:Ignorable="d" 
       d:DesignHeight="720" d:DesignWidth="1024"
-      Title="Saturn">
+      Title="Sonne">
 
     <Grid>
-        <Image HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="1024" Source="/Pictures/Saturn.png" Stretch="Fill" />
+        <Image HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="1024" Source="/Pictures/Sonne.png" Stretch="Fill" />
         <Button x:Name="backbutton" Content="zurück" Background="Turquoise" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="10,672,0,0" Height="38" Width="83" Click="backbutton_Click"/>
         
     </Grid>
