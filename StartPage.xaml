@@ -7,6 +7,38 @@
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="800"
       Title="StartPage">
+    <Page.Resources>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#000000FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#000000B1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#000000F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#0000008B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#000000F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#000000B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#00000083"/>
+        <ControlTemplate x:Key="ButtonTemplate1" TargetType="{x:Type ButtonBase}">
+            <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="true">
+                <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="Button.IsDefaulted" Value="true">
+                    <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="false">
+                    <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                    <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Page.Resources>
 
     <Grid>
 
@@ -22,7 +54,7 @@
             </TextBlock.RenderTransform>
         </TextBlock>
         <TextBlock HorizontalAlignment="Left" Height="73" Margin="656,517,0,0" Foreground="White" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"><Run Text="© "/><Span FontFamily="Arial" FontSize="17.3333333333333"/><Run Text=" Maria Eleni Sotircho"/><LineBreak/><Run Language="de-de" Text="     Roman Trusov"/><LineBreak/><Run Language="de-de" Text="     Natalia Buzel"/><LineBreak/><Run Language="de-de" Text="     Matthäus Herbst"/><Run Text=""/></TextBlock>
-        <Button x:Name="Start" Background="Transparent" FontSize="75" Foreground="AntiqueWhite" Content="Start" HorizontalAlignment="Left" Height="137" Margin="216,262,0,0" VerticalAlignment="Top" Width="333" Click="Start_Click"/>
+        <Button Template="{DynamicResource ButtonTemplate1}" x:Name="Start" Background="Transparent" FontSize="75" Foreground="AntiqueWhite" Content="Start" HorizontalAlignment="Left" Height="137" Margin="216,262,0,0" VerticalAlignment="Top" Width="333" Click="Start_Click"/>
 
     </Grid>
 </Page>
