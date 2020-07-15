@@ -96,7 +96,7 @@
             </Button.RenderTransform>
         </Button>
 
-        <DataGrid x:Name="Planetinfo" Background="Transparent" RowBackground="Transparent" Visibility="Visible" Width="251" Height="292" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="684,405,0,0" FontSize="25" FontWeight="Normal">
+        <DataGrid x:Name="Planetinfo" Background="Transparent" RowBackground="Transparent" Visibility="Hidden" Width="251" Height="292" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="684,405,0,0" FontSize="25" FontWeight="Normal">
             <DataGrid.Resources>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
                     <Setter Property="Background" Value="Transparent"/>
