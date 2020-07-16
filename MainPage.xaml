@@ -96,6 +96,24 @@
             </Button.RenderTransform>
         </Button>
 
+        <Grid x:Name="Planetinfo" Visibility="Hidden" Margin="684,405,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>      
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Label Foreground="Red" Grid.Row="0" Grid.Column="0" Content="Planeten Name"/>
+            <Label Foreground="Red" Grid.Row="1" Grid.Column="0" Content="Gravitation"/>
+            <Label Foreground="Red" Grid.Row="2" Grid.Column="0" Content="Alter"/>
+            <Label Foreground="Red" x:Name="LName" Grid.Row="0" Grid.Column="1"/>
+            <Label Foreground="Red" x:Name="LGravity" Grid.Row="1" Grid.Column="1" />
+            <Label Foreground="Red" x:Name="LAlter" Grid.Row="2" Grid.Column="1" />
+        </Grid>
+        <!--
         <DataGrid x:Name="Planetinfo" Background="Transparent" RowBackground="Transparent" Visibility="Hidden" Width="251" Height="292" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="684,405,0,0" FontSize="25" FontWeight="Normal">
             <DataGrid.Resources>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
@@ -115,6 +133,7 @@
 
             </DataGrid.Columns>
         </DataGrid>
+        -->
 
 
     </Grid>

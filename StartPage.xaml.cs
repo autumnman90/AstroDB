@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -26,6 +27,14 @@ namespace AstronomieDatenbank
         private void Start_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new MainPage());
+            SQLiteConnectionStringBuilder builder = new SQLiteConnectionStringBuilder();
+            builder.DataSource = @".\Datenbank\AstronomieDB.sqlite";
+            builder.Version = 3;
+
+            using (SQLiteConnection sqlConnection = new SQLiteConnection(builder.ToString()))
+            {
+                sqlConnection.Open();
+            }
         }
     }
 }

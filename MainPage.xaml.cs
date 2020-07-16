@@ -1,6 +1,7 @@
 ﻿using Astro_DB;
 using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Numerics;
 using System.Text;
 using System.Windows;
@@ -35,11 +36,30 @@ namespace AstronomieDatenbank
         bool mousepluto = false;
         bool mousesaturn = false;
         bool mousesonne = false;
+
+
+        private PlanetenInfoModel _ausgewaehlterPlanet;
+        
         public MainPage()
         {
             InitializeComponent();
-            SolidColorBrush transparent = new SolidColorBrush(Colors.Transparent);
+
+            Database.Loader();
+
         }
+
+        public PlanetenInfoModel ausgewaehlterPlanet 
+        {
+            get { return _ausgewaehlterPlanet; }
+            set { _ausgewaehlterPlanet = value;
+                LName.Content = _ausgewaehlterPlanet.PlanetName;
+                LGravity.Content = _ausgewaehlterPlanet.Gravity;
+                LAlter.Content = _ausgewaehlterPlanet.Alter;
+            } 
+        }
+
+
+
 
         SolidColorBrush transparent = new SolidColorBrush(Colors.Transparent);
 
@@ -102,6 +122,7 @@ namespace AstronomieDatenbank
             if (mousesonne == false)
             {
                 Planetinfo.Visibility = Visibility.Visible;
+                
                 mousesonne = true;
             }
         }
@@ -119,16 +140,19 @@ namespace AstronomieDatenbank
         {
             BtnMerkur.Background = transparent;
 
+            ausgewaehlterPlanet = Database.PlanetenDaten[0];
+
             if (mousemerkur == false)
             {
                 Planetinfo.Visibility = Visibility.Visible;
+                
                 mousemerkur = true;
             }
         }
 
         private void BtnMerkur_MouseLeave(object sender, MouseEventArgs e)
         {
-            if (mousemerkur = true)
+            if (mousemerkur == true)
             {
                 Planetinfo.Visibility = Visibility.Hidden;
                 mousemerkur = false;
@@ -138,6 +162,9 @@ namespace AstronomieDatenbank
         private void BtnErde_MouseEnter(object sender, MouseEventArgs e)
         {
             BtnErde.Background = transparent;
+
+            ausgewaehlterPlanet = Database.PlanetenDaten[2];
+
             if (mouseerde == false)
             {
                 Planetinfo.Visibility = Visibility.Visible;
@@ -149,7 +176,7 @@ namespace AstronomieDatenbank
         private void BtnErde_MouseLeave(object sender, MouseEventArgs e)
         {
 
-            if (mouseerde = true)
+            if (mouseerde == true)
             {
                 Planetinfo.Visibility = Visibility.Hidden;
                 mouseerde = false;
@@ -160,6 +187,9 @@ namespace AstronomieDatenbank
         private void BtnVenus_MouseEnter(object sender, MouseEventArgs e)
         {
             BtnVenus.Background = transparent;
+
+            ausgewaehlterPlanet = Database.PlanetenDaten[1];
+
             if (mousevenus == false)
             {
                 Planetinfo.Visibility = Visibility.Visible;
@@ -171,7 +201,7 @@ namespace AstronomieDatenbank
         private void BtnVenus_MouseLeave(object sender, MouseEventArgs e)
         {
 
-            if (mousevenus = true)
+            if (mousevenus == true)
             {
                 Planetinfo.Visibility = Visibility.Hidden;
                 mousevenus = false;
@@ -182,6 +212,9 @@ namespace AstronomieDatenbank
         private void BtnJupiter_MouseEnter(object sender, MouseEventArgs e)
         {
             BtnJupiter.Background = transparent;
+
+            ausgewaehlterPlanet = Database.PlanetenDaten[4];
+
             if (mousejupiter == false)
             {
                 Planetinfo.Visibility = Visibility.Visible;
@@ -192,7 +225,7 @@ namespace AstronomieDatenbank
 
         private void BtnJupiter_MouseLeave(object sender, MouseEventArgs e)
         {
-            if (mousejupiter = true)
+            if (mousejupiter == true)
             {
                 Planetinfo.Visibility = Visibility.Hidden;
                 mousejupiter = false;
@@ -203,6 +236,9 @@ namespace AstronomieDatenbank
         private void BtnMars_MouseEnter(object sender, MouseEventArgs e)
         {
             BtnMars.Background = transparent;
+
+            ausgewaehlterPlanet = Database.PlanetenDaten[3];
+
             if (mousemars == false)
             {
                 Planetinfo.Visibility = Visibility.Visible;
@@ -213,7 +249,7 @@ namespace AstronomieDatenbank
 
         private void BtnMars_MouseLeave(object sender, MouseEventArgs e)
         {
-            if (mousemars = true)
+            if (mousemars == true)
             {
                 Planetinfo.Visibility = Visibility.Hidden;
                 mousemars = false;
@@ -224,6 +260,9 @@ namespace AstronomieDatenbank
         private void BtnUranus_MouseEnter(object sender, MouseEventArgs e)
         {
             BtnUranus.Background = transparent;
+
+            ausgewaehlterPlanet = Database.PlanetenDaten[6];
+
             if (mouseuranus == false)
             {
                 Planetinfo.Visibility = Visibility.Visible;
@@ -234,7 +273,7 @@ namespace AstronomieDatenbank
 
         private void BtnUranus_MouseLeave(object sender, MouseEventArgs e)
         {
-            if (mouseuranus = true)
+            if (mouseuranus == true)
             {
                 Planetinfo.Visibility = Visibility.Hidden;
                 mouseuranus = false;
@@ -245,6 +284,9 @@ namespace AstronomieDatenbank
         private void BtnNeptun_MouseEnter(object sender, MouseEventArgs e)
         {
             BtnNeptun.Background = transparent;
+
+            ausgewaehlterPlanet = Database.PlanetenDaten[7];
+
             if (mouseneptun == false)
             {
                 Planetinfo.Visibility = Visibility.Visible;
@@ -256,7 +298,7 @@ namespace AstronomieDatenbank
         private void BtnNeptun_MouseLeave(object sender, MouseEventArgs e)
         {
 
-            if (mouseneptun = true)
+            if (mouseneptun == true)
             {
                 Planetinfo.Visibility = Visibility.Hidden;
                 mouseneptun = false;
@@ -277,7 +319,7 @@ namespace AstronomieDatenbank
 
         private void BtnPluto_MouseLeave(object sender, MouseEventArgs e)
         {
-            if (mousepluto = true)
+            if (mousepluto == true)
             {
                 Planetinfo.Visibility = Visibility.Hidden;
                 mousepluto = false;
@@ -288,6 +330,9 @@ namespace AstronomieDatenbank
         private void BtnSaturn_MouseEnter(object sender, MouseEventArgs e)
         {
             BtnSaturn.Background = transparent;
+
+            ausgewaehlterPlanet = Database.PlanetenDaten[5];
+
             if (mousesaturn == false)
             {
                 Planetinfo.Visibility = Visibility.Visible;
@@ -298,7 +343,7 @@ namespace AstronomieDatenbank
 
         private void BtnSaturn_MouseLeave(object sender, MouseEventArgs e)
         {
-            if (mousesaturn = true)
+            if (mousesaturn == true)
             {
                 Planetinfo.Visibility = Visibility.Hidden;
                 mousesaturn = false;
