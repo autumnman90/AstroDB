@@ -11,6 +11,52 @@
     <Grid>
         <Image HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="1024" Source="/Pictures/Merkur.png" Stretch="Fill" />
         <Button x:Name="backbutton" Content="zurück" Background="Turquoise" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="10,672,0,0" Height="38" Width="83" Click="backbutton_Click"/>
+
+        <Grid Margin="568,355,22,0" Height="336" VerticalAlignment="Top" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Label Foreground="Red" Grid.Row="0" Grid.Column="0" Content="Name"/>
+            <Label Foreground="Red" Grid.Row="1" Grid.Column="0" Content="Alter"/>
+            <Label Foreground="Red" Grid.Row="2" Grid.Column="0" Content="Entfernung zur Sonne"/>
+            <Label Foreground="Red" Grid.Row="3" Grid.Column="0" Content="Durchmesser"/>
+            <Label Foreground="Red" Grid.Row="4" Grid.Column="0" Content="Masse"/>
+            <Label Foreground="Red" Grid.Row="5" Grid.Column="0" Content="Rotationsperiode"/>
+            <Label Foreground="Red" Grid.Row="6" Grid.Column="0" Content="Temperatur"/>
+            <Label Foreground="Red" Grid.Row="7" Grid.Column="0" Content="Luminiszens"/>
+            <Label Foreground="Red" Grid.Row="8" Grid.Column="0" Content="Gravitation"/>
+            <Label Foreground="Red" Grid.Row="9" Grid.Column="0" Content="Anzahl der Monde"/>
+            <Label Foreground="Red" Grid.Row="10" Grid.Column="0" Content="Composition_Name"/>
+            <Label Foreground="Red" Grid.Row="0" Grid.Column="1" x:Name="LName"/>
+            <Label Foreground="Red" Grid.Row="0" Grid.Column="1" x:Name="LAlter"/>
+            <Label Foreground="Red" Grid.Row="0" Grid.Column="1" x:Name="LAphilion"/>
+            <Label Foreground="Red" Grid.Row="0" Grid.Column="1" x:Name="LDmsr"/>
+            <Label Foreground="Red" Grid.Row="0" Grid.Column="1" x:Name="LMasse"/>
+            <Label Foreground="Red" Grid.Row="0" Grid.Column="1" x:Name="LRot"/>
+            <Label Foreground="Red" Grid.Row="0" Grid.Column="1" x:Name="LTemp"/>
+            <Label Foreground="Red" Grid.Row="0" Grid.Column="1" x:Name="LLumi"/>
+            <Label Foreground="Red" Grid.Row="0" Grid.Column="1" x:Name="LGrav"/>
+            <Label Foreground="Red" Grid.Row="0" Grid.Column="1" x:Name="LAdm"/>
+            <Label Foreground="Red" Grid.Row="0" Grid.Column="1" x:Name="LComp"/>
+        </Grid>
+
+
+
+        <!--
         <DataGrid x:Name="Planetinfo" Background="Transparent" RowBackground="Transparent" Visibility="Visible" Width="251" Height="392" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="23,24,0,0" FontSize="25" FontWeight="Normal">
             <DataGrid.Resources>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
@@ -30,6 +76,7 @@
 
             </DataGrid.Columns>
         </DataGrid>
+        -->
 
     </Grid>
 </Page>

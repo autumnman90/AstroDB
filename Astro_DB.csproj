@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Datenbank\AstronomieDB.sqlite" />
     <None Remove="Pictures\Erde.png" />
     <None Remove="Pictures\Jupiter.png" />
     <None Remove="Pictures\mars.png" />
@@ -23,6 +24,16 @@
     <None Remove="Pictures\Venus.png" />
     <None Remove="Sonnensysem-im-Anfangsstatium-768x480.png" />
     <None Remove="Sonnensystem-Stockillustration-768x512.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Datenbank\AstronomieDB.sqlite">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.113.1" />
   </ItemGroup>
 
   <ItemGroup>
