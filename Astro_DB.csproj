@@ -12,6 +12,7 @@
     <None Remove="Pictures\mars.png" />
     <None Remove="Pictures\Merkur.png" />
     <None Remove="Pictures\neptun.png" />
+    <None Remove="Pictures\Pluto.jpg" />
     <None Remove="Pictures\pluto.png" />
     <None Remove="Pictures\Saturn.png" />
     <None Remove="Pictures\sonne.png" />
@@ -38,6 +39,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Pictures\neptun.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Pluto.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Pictures\pluto.png">

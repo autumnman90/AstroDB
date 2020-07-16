@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Astro_DB", "Astro_DB.csproj", "{487A66AC-0BB0-421F-97F4-28D0FC867BBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Astro_DB", "Astro_DB.csproj", "{487A66AC-0BB0-421F-97F4-28D0FC867BBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "View", "..\View\View.csproj", "{B46CF11E-631A-4333-9A4D-E2DB9BEB5C78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "..\Test\Test.csproj", "{20C054A1-1872-41DD-AF47-309608600B61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{487A66AC-0BB0-421F-97F4-28D0FC867BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{487A66AC-0BB0-421F-97F4-28D0FC867BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{487A66AC-0BB0-421F-97F4-28D0FC867BBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B46CF11E-631A-4333-9A4D-E2DB9BEB5C78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B46CF11E-631A-4333-9A4D-E2DB9BEB5C78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B46CF11E-631A-4333-9A4D-E2DB9BEB5C78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B46CF11E-631A-4333-9A4D-E2DB9BEB5C78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20C054A1-1872-41DD-AF47-309608600B61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20C054A1-1872-41DD-AF47-309608600B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20C054A1-1872-41DD-AF47-309608600B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20C054A1-1872-41DD-AF47-309608600B61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
