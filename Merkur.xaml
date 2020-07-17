@@ -7,12 +7,16 @@
       mc:Ignorable="d" 
       d:DesignHeight="720" d:DesignWidth="1024"
       Title="Merkur">
-
+    <Page.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+    </Page.Resources>
     <Grid>
-        <Image HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="1024" Source="/Pictures/Merkur.png" Stretch="Fill" />
+        <Image HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="1024" Source="{Binding ImagePath}" Stretch="Fill" />
         <Button x:Name="backbutton" Content="zurück" Background="Turquoise" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="10,672,0,0" Height="38" Width="83" Click="backbutton_Click"/>
 
-        <Grid Margin="568,355,22,0" Height="336" VerticalAlignment="Top" >
+        <Grid Margin="568,355,22,0" Height="336" VerticalAlignment="Top"  Background="#dd999999"> <!-- ARGB-->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="*"/>
@@ -30,28 +34,28 @@
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="30"/>
             </Grid.RowDefinitions>
-            <Label Foreground="Red" Grid.Row="0" Grid.Column="0" Content="Name"/>
-            <Label Foreground="Red" Grid.Row="1" Grid.Column="0" Content="Alter"/>
-            <Label Foreground="Red" Grid.Row="2" Grid.Column="0" Content="Entfernung zur Sonne"/>
-            <Label Foreground="Red" Grid.Row="3" Grid.Column="0" Content="Durchmesser"/>
-            <Label Foreground="Red" Grid.Row="4" Grid.Column="0" Content="Masse"/>
-            <Label Foreground="Red" Grid.Row="5" Grid.Column="0" Content="Rotationsperiode"/>
-            <Label Foreground="Red" Grid.Row="6" Grid.Column="0" Content="Temperatur"/>
-            <Label Foreground="Red" Grid.Row="7" Grid.Column="0" Content="Luminiszens"/>
-            <Label Foreground="Red" Grid.Row="8" Grid.Column="0" Content="Gravitation"/>
-            <Label Foreground="Red" Grid.Row="9" Grid.Column="0" Content="Anzahl der Monde"/>
-            <Label Foreground="Red" Grid.Row="10" Grid.Column="0" Content="Composition_Name"/>
-            <Label Foreground="Red" Grid.Row="0" Grid.Column="1" x:Name="LName"/>
-            <Label Foreground="Red" Grid.Row="0" Grid.Column="1" x:Name="LAlter"/>
-            <Label Foreground="Red" Grid.Row="0" Grid.Column="1" x:Name="LAphilion"/>
-            <Label Foreground="Red" Grid.Row="0" Grid.Column="1" x:Name="LDmsr"/>
-            <Label Foreground="Red" Grid.Row="0" Grid.Column="1" x:Name="LMasse"/>
-            <Label Foreground="Red" Grid.Row="0" Grid.Column="1" x:Name="LRot"/>
-            <Label Foreground="Red" Grid.Row="0" Grid.Column="1" x:Name="LTemp"/>
-            <Label Foreground="Red" Grid.Row="0" Grid.Column="1" x:Name="LLumi"/>
-            <Label Foreground="Red" Grid.Row="0" Grid.Column="1" x:Name="LGrav"/>
-            <Label Foreground="Red" Grid.Row="0" Grid.Column="1" x:Name="LAdm"/>
-            <Label Foreground="Red" Grid.Row="0" Grid.Column="1" x:Name="LComp"/>
+            <Label Grid.Row="0" Grid.Column="0" Content="Name"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Alter"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Entfernung zur Sonne"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Durchmesser"/>
+            <Label Grid.Row="4" Grid.Column="0" Content="Masse"/>
+            <Label Grid.Row="5" Grid.Column="0" Content="Rotationsperiode"/>
+            <Label Grid.Row="6" Grid.Column="0" Content="Temperatur"/>
+            <Label Grid.Row="7" Grid.Column="0" Content="Luminiszens"/>
+            <Label Grid.Row="8" Grid.Column="0" Content="Gravitation"/>
+            <Label Grid.Row="9" Grid.Column="0" Content="Anzahl der Monde"/>
+            <Label Grid.Row="10" Grid.Column="0" Content="Composition_Name"/>
+            <Label DataContext="{Binding CurrentPlanet}" Content="{Binding PlanetName}"  Grid.Row="0" Grid.Column="1" x:Name="LName"/>
+            <Label DataContext="{Binding CurrentPlanet}" Content="{Binding Alter}"       Grid.Row="1" Grid.Column="1" x:Name="LAlter"/>
+            <Label DataContext="{Binding CurrentPlanet}" Content="{Binding Aphelion}"    Grid.Row="2" Grid.Column="1" x:Name="LAphilion"/>
+            <Label DataContext="{Binding CurrentPlanet}" Content="{Binding Diameter}"    Grid.Row="3" Grid.Column="1" x:Name="LDmsr"/>
+            <Label DataContext="{Binding CurrentPlanet}" Content="{Binding Mass}"        Grid.Row="4" Grid.Column="1" x:Name="LMasse"/>
+            <Label DataContext="{Binding CurrentPlanet}" Content="{Binding Rotation_Period}" Grid.Row="5" Grid.Column="1" x:Name="LRot"/>
+            <Label DataContext="{Binding CurrentPlanet}" Content="{Binding Temperature}" Grid.Row="6" Grid.Column="1" x:Name="LTemp"/>
+            <Label DataContext="{Binding CurrentPlanet}" Content="{Binding Luminosity}" Grid.Row="7" Grid.Column="1" x:Name="LLumi"/>
+            <Label DataContext="{Binding CurrentPlanet}" Content="{Binding Gravity}"  Grid.Row="8" Grid.Column="1" x:Name="LGrav"/>
+            <Label DataContext="{Binding CurrentPlanet}" Content="{Binding Moons_Number}"  Grid.Row="9" Grid.Column="1" x:Name="LAdm"/>
+            <Label DataContext="{Binding CurrentPlanet}" Content="{Binding CompositionName}"  Grid.Row="10" Grid.Column="1" x:Name="LComp"/>
         </Grid>
 
 

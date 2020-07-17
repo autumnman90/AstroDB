@@ -72,7 +72,9 @@ namespace AstronomieDatenbank
 
         private void BtnMerkur_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Merkur()); //Auf Page Merkur wechseln
+            Page neueSeite = new Merkur();
+            neueSeite.DataContext = new PlanetInfoViewModel(3);
+            NavigationService.Navigate(neueSeite); //Auf Page Merkur wechseln
         }
 
         private void BtnErde_Click(object sender, RoutedEventArgs e)
